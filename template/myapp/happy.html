@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static 'css/makeup.css' %}">
+</head>
+<body>
+<h1>Welcome to forms using CSRF </h1>
+
+<div class="container" align="center">
+    <form method="POST">
+        {{preethi.as_p}}
+        {% csrf_token %}
+        <input type="submit" value="enter " class="btn btn success">
+    </form>
+</div>
+</body>
+</html>
